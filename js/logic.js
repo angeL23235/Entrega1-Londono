@@ -20,10 +20,12 @@ function userPurchase() {
               listaProductos += `${product.nombre} - Precio: $${product.precio} - Stock: ${product.stock}\n`;
           });
           alert(listaProductos);
+          confirm("Buenos elementos?")
       } else if (respuesta === salir) {
           alert("¡Gracias por visitar nuestra tienda!");
       } else {
           alert("Ya vimos que no te interesa entonces chau :c"); 
+          console.log("no le gusto")
       }
   }
 
