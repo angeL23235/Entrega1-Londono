@@ -5,18 +5,24 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Simulador de compras (E-commerce)</title>
     <!-- Link a JavaScript -->
-    <script src="js/logic.js" defer></script>
+    <script type="module" src="js/purcharse.js" defer></script>
+    <script type="module" src="js/index.js" defer></script>
     <!-- Link a CSS -->
     <link rel="stylesheet" href="css/styles.css" />
   </head>
   <body>
     <div class="container-simulator">
-      <div class="content">
+      <div id="producto_venta" class="content">
         <h1 class="title">Bienvenido a Phantom👻 tu tienda de confianza</h1>
         <p class="paragraphe-content">
-          En este simulador podrás elegir entre diferentes artículos tanto de colección como deportivos de diferentes juegos. Puedes hacer compras de manera interactiva.
+          En este simulador podrás elegir entre diferentes artículos tanto de colección como deportivos. Puedes hacer compras de manera interactiva.
         </p>
-        <button class="compra">¡Compra ya!</button>
+        <!-- Productos -->
+         <main>
+            <section class="producto_venta_style">
+            </section>
+            <button class="carrito-add-style">Ver mi carrito 🛒</button>
+         </main>
       </div>
     </div>
   </body>

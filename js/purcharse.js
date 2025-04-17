@@ -1,13 +1,7 @@
+import { productsList } from "./listProducts.js";
 function userPurchase() {
   // array de objetos con los productos de mi tienda xd
-  let products = [
-      { nombre: "Camisa Michael Jordan", precio: 2000, stock: 20 },
-      { nombre: "Figura tamaño real de Iron Man", precio: 90000, stock: 2 },
-      { nombre: "Short de basquetball", precio: 4000, stock: 10 },
-      { nombre: "Camisa Michael Jordan", precio: 3500, stock: 20 },
-      { nombre: "Balón NBA original", precio: 67500, stock: 15 }
-  ];
-
+    const products = productsList;
   // Función para mostrar productos
   function showProducts() {
       const ver = 1;
@@ -32,4 +26,4 @@ function userPurchase() {
   showProducts(); 
 }
 
-userPurchase();
+window.userPurchase = userPurchase;
