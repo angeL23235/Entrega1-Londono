@@ -7,22 +7,63 @@
     <!-- Link a JavaScript -->
     <script type="module" src="js/purcharse.js" defer></script>
     <script type="module" src="js/index.js" defer></script>
+    <script type="module" src="js/add-car.js" defer></script>
     <!-- Link a CSS -->
     <link rel="stylesheet" href="css/styles.css" />
+    <!-- BOOTSTRAP -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.5/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-SgOJa3DmI69IUzQ2PVdRZhwQ+dy64/BUtbMJw1MZ8t5HZApcHrRKUc4W0kG879m7" crossorigin="anonymous">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.5/dist/js/bootstrap.bundle.min.js" integrity="sha384-k6d4wzSIapyDyv1kpU366/PK5hCdSbCRGRCMv+eplOQJWyd1fbcAu9OCUj5zNLiq" crossorigin="anonymous" defer></script>
+  </body>
   </head>
   <body>
     <div class="container-simulator">
       <div id="producto_venta" class="content">
         <h1 class="title">Bienvenido a Phantom👻 tu tienda de confianza</h1>
         <p class="paragraphe-content">
-          En este simulador podrás elegir entre diferentes artículos tanto de colección como deportivos. Puedes hacer compras de manera interactiva.
+          En este simulador podrás elegir entre diferentes artículos tanto de
+          colección como deportivos. Puedes hacer compras de manera interactiva.
         </p>
         <!-- Productos -->
-         <main>
-            <section class="producto_venta_style">
-            </section>
-            <button class="carrito-add-style">Ver mi carrito 🛒</button>
-         </main>
+        <main>
+          <section class="producto_venta_style"></section>
+        </main>
+        <button
+          style="margin-top: 200px;"
+          class="btn btn-primary"
+          type="button"
+          data-bs-toggle="offcanvas"
+          data-bs-target="#offcanvasRight"
+          aria-controls="offcanvasRight"
+        >
+          Ver carrito de compras 🛒
+        </button>
+
+        <div
+          class="offcanvas offcanvas-end"
+          tabindex="-1"
+          id="offcanvasRight"
+          aria-labelledby="offcanvasRightLabel"
+        >
+          <div class="offcanvas-header">
+            <h5 class="offcanvas-title" id="offcanvasRightLabel">
+              Carrito
+            </h5>
+            <button
+              type="button"
+              class="btn-close"
+              data-bs-dismiss="offcanvas"
+              aria-label="Close"
+            ></button>
+          </div>
+          <div class="offcanvas-body">
+            <aside class="carrito">
+              <h2>🛒 Tu carrito</h2>
+              <ul id="lista-carrito" style="list-style: none"></ul>
+              <p id="total-carrito">Total: $0</p>
+            </aside>
+          </div>
+        </div>
+
       </div>
     </div>
   </body>

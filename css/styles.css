@@ -89,3 +89,16 @@ main{
     font-weight: bold; 
     cursor: pointer;
 }
+.carrito{
+    display: flex;
+    position: fixed;
+    width: 20%;
+    right: 30px;
+    align-items: center;
+    flex-direction: column;
+    justify-content: center;
+    margin-top: 200px;
+    height: 30%;
+    color: black;
+    background-color: white;
+}
