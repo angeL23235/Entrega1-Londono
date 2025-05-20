@@ -27,9 +27,7 @@ function loadProducts() {
       botonesAgregar.forEach(boton => {
         boton.addEventListener("click", addCar);
       });
-
-      // Guardar productos en caché
-      window.productsCache = limited; // importante usar 'limited', no 'data'
+      window.productsCache = limited; 
     });
 }
 
