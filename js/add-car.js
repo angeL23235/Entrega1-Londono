@@ -1,4 +1,3 @@
-import { productsList } from "./listProducts.js";
 
 let carrito = [];
 
@@ -20,9 +19,11 @@ function addCar(event) {
   const card = event.target.closest(".card-producto");
   const nombre = card.querySelector("h2").textContent;
 
+  const productsList = window.productsCache || [];
   const producto = productsList.find(p => p.nombre === nombre);
+
   if (!producto || producto.stock <= 0) {
-    alert("Producto sin stock");
+    Swal.fire("Producto sin stock");
     return;
   }
 
