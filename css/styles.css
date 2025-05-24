@@ -112,7 +112,15 @@ body {
   color: white;
   text-align: center;
 }
-
+.btn-show{
+  margin:5rem 0 0 30rem;
+  text-align: center;
+  padding: 10px;
+  border: 1px solid black;
+  border-radius: 5px;
+  background-color: #3a6dd7;
+  color: white;
+}
 @media (max-width: 700px) {
   .container-simulator {
     padding: 20px 10px;
