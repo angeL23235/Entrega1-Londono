@@ -1,5 +1,17 @@
-
 let carrito = [];
+
+// Cargar carrito guardado cuando inicio la página
+function cargarCarritoDeStorage() {
+  const carritoGuardado = localStorage.getItem("carrito");
+  if (carritoGuardado) {
+    carrito = JSON.parse(carritoGuardado);
+  }
+}
+
+// Guardar carrito en localStorage
+function guardarCarritoEnStorage() {
+  localStorage.setItem("carrito", JSON.stringify(carrito));
+}
 
 function mostrarCarrito() {
   const lista = document.querySelector("#lista-carrito");
@@ -35,12 +47,19 @@ function addCar(event) {
   }
 
   producto.stock -= 1;
+
   mostrarCarrito();
+
+  // Guardar en localStorage
+  guardarCarritoEnStorage();
 }
 
-// Esperar a que los productos se rendericen primero
+//cargar carrito guardado y mostrarlo
 document.addEventListener("DOMContentLoaded", () => {
-  // Esperamos un poquito a que index.js termine de renderizar los productos
+  cargarCarritoDeStorage();
+  mostrarCarrito();
+
+  // Esperar un poquito a que index.js termine
   setTimeout(() => {
     const botonesAgregar = document.querySelectorAll(".btn-add-car");
     botonesAgregar.forEach(boton => {
